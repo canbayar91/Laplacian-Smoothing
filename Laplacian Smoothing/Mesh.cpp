@@ -22,11 +22,6 @@ void Mesh::addFace(unsigned int a, unsigned int b, unsigned int c, unsigned int 
 	vertexList[c]->addNeighbor(vertexList[d]);
 	vertexList[d]->addNeighbor(vertexList[a]);
 
-	vertexList[a]->addNeighbor(vertexList[d]);
-	vertexList[b]->addNeighbor(vertexList[a]);
-	vertexList[c]->addNeighbor(vertexList[b]);
-	vertexList[d]->addNeighbor(vertexList[c]);
-
 	Face face(a, b, c, d);
 	faceList.push_back(face);
 	
